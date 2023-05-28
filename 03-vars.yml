@@ -20,6 +20,6 @@
       ansible.builtin.debug:
         msg: URL - {{ URL }}
       vars:
-        URL: Play.example.com
+        URL: tasks.example.com
 
 #row 16-23 if you are assigning variable inside tasks then only that tasks can access that variabl.
