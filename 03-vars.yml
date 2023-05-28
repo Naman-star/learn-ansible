@@ -23,3 +23,12 @@
         URL: tasks.example.com
 
 #row 16-23 if you are assigning variable inside tasks then only that tasks can access that variabl.
+
+- name: load vars from a file
+  hosts: all
+  vars_file:
+    -exvars.yml
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
