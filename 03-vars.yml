@@ -12,3 +12,14 @@
 # Quotes are mandatory if value starts with variable,meaning
 #msg: {{ URL}} <- This Requires quoting.
 #msg: URL - {{ URL}} <- This does not require quoting.
+
+- name: Demo on Task Level variables
+  hosts: all
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
+      vars:
+        URL: Play.example.com
+
+#row 16-23 if you are assigning variable inside tasks then only that tasks can access that variabl.
