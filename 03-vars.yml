@@ -1,11 +1,11 @@
 - name: Demo on Play Level variables
   hosts: all
   vars:
-    URL: Pay.example.com
-    tasks:
-      - name: Print URL
-        ansible.builtin.debug:
-          msg: URL - {{ URL }}
+    URL: Play.example.com
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL - {{ URL }}
 
 #in Ansible variables can be accessed by doble flower brackets
 #Ansible supports double quotes and single quotes,however quotes are not mandatory in all cases.
