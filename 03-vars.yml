@@ -32,3 +32,11 @@
     - name: Print URL
       ansible.builtin.debug:
         msg: URL - {{ URL }}
+
+#row 27-35 we are accesing url from another file or accessing files.
+#vars_files does not support task level,it is for play level only.
+
+- name: Variable from Roles
+  hosts: all
+  roles:
+    - sample
