@@ -4,5 +4,5 @@
   tasks:
     - name: Demo task for loop
       ansible.builtin.debug:
-        msg: Arch - {{ ansible_archotecture }}
+        msg: Arch - {{ ansible_architecture }}
 
